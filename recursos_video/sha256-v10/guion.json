@@ -1,0 +1,66 @@
+{
+  "configuracion_reels": {
+    "objetivo": "Crear un video tipo Reel/TikTok continuo y narrativo sobre el caso de fraude corporativo de Enron (2001), destacando el uso de e-Discovery y la informática forense para recuperar más de 200,000 correos electrónicos.",
+    "formato_video": "Vertical 1080x1920 (Relación de aspecto 9:16).",
+    "duracion_total": "64 segundos (8 clips, 8 segundos por clip).",
+    "estilo_visual_ia": "Fotorealismo conceptual, thriller financiero, corporativo y ciber-forense. Ambientes de oficinas oscuras, rascacielos, hologramas de correos electrónicos, servidores de datos y luces de neón (azul, ámbar y rojo). Fondo oscuro con amplio espacio negativo central para los subtítulos. REGLA: SIN TEXTO GENERADO EN LA IMAGEN."
+  },
+  "guion_video_clips": [
+    {
+      "clip": 1,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Enganche introductorio presentando el histórico fraude corporativo internacional de Enron.",
+      "texto_en_pantalla": "En el año 2001, el gigante energético Enron protagonizó uno de los mayores fraudes corporativos de la historia de Estados Unidos.",
+      "prompt_ia_generadora": "A luxurious but dark corporate skyscraper at night, with a single floor emitting a glowing red ominous light. Cinematic lighting, dramatic shadows, financial thriller aesthetic, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 2,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "El modus operandi de la cúpula corporativa y su falsa sensación de impunidad tecnológica.",
+      "texto_en_pantalla": "Sus altos directivos ocultaron miles de millones en deudas mediante complejas maniobras, creyendo que sus comunicaciones internas jamás saldrían a la luz.",
+      "prompt_ia_generadora": "A dark, luxurious boardroom where shadowy figures sit around a large mahogany table, while glowing red financial charts crash in the background. Suspenseful atmosphere, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 3,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Intervención de las autoridades e inicio del peritaje informático sobre la infraestructura de la empresa.",
+      "texto_en_pantalla": "Tras la quiebra, las autoridades intervinieron los servidores de la empresa aplicando técnicas pioneras de informática forense y búsqueda legal masiva, e-Discovery.",
+      "prompt_ia_generadora": "Silhouettes of forensic investigators securing massive glowing blue corporate server racks with bright yellow crime scene tape. High-tech cyber-investigation theme, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 4,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "La recolección masiva de evidencia digital (e-Discovery) procesando cientos de miles de correos electrónicos.",
+      "texto_en_pantalla": "Los investigadores incautaron y procesaron forensemente más de doscientos mil correos electrónicos corporativos, extrayendo la evidencia digital directamente desde las bases de datos.",
+      "prompt_ia_generadora": "A futuristic digital magnifying glass scanning a massive, glowing matrix of thousands of blue email envelopes floating in a dark void. Data mining aesthetic, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 5,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "El análisis de las comunicaciones que demostró el dolo y la intención criminal de los directivos.",
+      "texto_en_pantalla": "El análisis de las comunicaciones reveló instrucciones explícitas de la alta gerencia para alterar los balances financieros y engañar a los inversores.",
+      "prompt_ia_generadora": "A glowing holographic computer screen showing a red malicious email message being magically restored from green binary code. Cybersecurity laboratory setting, neon contrast, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 6,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Aplicación de técnicas forenses como el cálculo Hash para asegurar la inalterabilidad de la prueba digital.",
+      "texto_en_pantalla": "Toda esta evidencia electrónica fue asegurada legalmente utilizando algoritmos criptográficos Hash, garantizando su inalterabilidad ante los tribunales y blindando el proceso penal.",
+      "prompt_ia_generadora": "A glowing cryptographic hash code securely sealing a digital folder, transforming into a heavy neon blue padlock. Cyber-legal aesthetic, dramatic amber and cyan lights, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 7,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Resolución judicial penal con condenas basadas en la inmutabilidad de la prueba electrónica.",
+      "texto_en_pantalla": "Incapaces de refutar sus propios correos electrónicos recuperados, los altos ejecutivos fueron condenados a severas penas de prisión por conspiración y fraude.",
+      "prompt_ia_generadora": "A heavy wooden judge's gavel smashing down next to a glowing red computer screen and digital handcuffs made of laser light. Authoritative legal atmosphere, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 8,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Lección legal sobre las comunicaciones corporativas y Llamado a la Acción (CTA).",
+      "texto_en_pantalla": "La lección: en el entorno corporativo internacional, tus correos electrónicos son la prueba forense más letal. ¡Guarda este video y compártelo!",
+      "prompt_ia_generadora": "A bright neon shield protecting a glowing digital email envelope from an array of red cyber threats. Dark minimalist background, plenty of negative space for text at the top and center, 9:16 aspect ratio, no text."
+    }
+  ]
+}

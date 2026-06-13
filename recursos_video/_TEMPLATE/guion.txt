@@ -1,0 +1,75 @@
+
+Aquí tienes un nuevo contenido basado en tus documentos, listo para ser procesado por la IA. 
+
+Para esta ocasión, he redactado un caso fascinante centrado en una modalidad moderna de cibercrimen documentada en tus fuentes: el **"Crimen como Servicio" (CaaS) a través de la Deep Web**. La historia ilustra cómo los criminales intentan ocultarse usando el navegador **Tor** y cómo los peritos utilizan entornos aislados o **"Cajas de Arena" (Sand Box)** para investigarlos. Todo esto está adaptado al marco legal venezolano, destacando el procedimiento de **Obtención por Aseguramiento** y el uso de la **Planilla de Registro de Cadena de Custodia (PRCC)** para garantizar la validez de la prueba.
+
+El guion está estructurado en tu formato `.json` habitual de **8 fragmentos de 8 segundos**, con textos calculados (aprox. 22 palabras) para un ritmo de locución perfecto y *prompts* visuales en inglés:
+
+```json
+{
+  "configuracion_reels": {
+    "objetivo": "Crear un video tipo Reel/TikTok continuo y narrativo sobre el 'Crimen como Servicio' en la Deep Web, y cómo la informática forense y el MUCCEF logran desmantelar estas redes en Venezuela.",
+    "formato_video": "Vertical 1080x1920 (Relación de aspecto 9:16).",
+    "duracion_total": "64 segundos (8 clips, 8 segundos por clip).",
+    "estilo_visual_ia": "Fotorealismo conceptual, thriller de ciberespionaje y forense. Ambientes oscuros, redes de datos cifrados, navegador Tor (cebolla), hologramas de criptomonedas y luces de neón (verde, azul y rojo). Fondo oscuro con amplio espacio negativo central para los subtítulos. REGLA: SIN TEXTO GENERADO EN LA IMAGEN."
+  },
+  "guion_video_clips": [
+    {
+      "clip": 1,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Enganche introductorio presentando la modalidad delictiva CaaS (Crimen como Servicio) en la Dark Web.",
+      "texto_en_pantalla": "En Venezuela, una red criminal operaba un mercado millonario en la Deep Web. Ofrecían 'Crimen como Servicio' cobrando exclusivamente en criptomonedas.",
+      "prompt_ia_generadora": "A glowing holographic dark web marketplace displaying neon green cryptocurrency symbols floating above a dark hacker desk. Cinematic lighting, thriller aesthetic, cyber-crime atmosphere, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 2,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "El modus operandi: venta de drogas, contrabando y hackeos bajo el anonimato del navegador Tor.",
+      "texto_en_pantalla": "Vendían desde hackeos hasta contrabando, ocultando sus direcciones IP a través de los múltiples saltos cifrados que proporciona el navegador TOR.",
+      "prompt_ia_generadora": "A glowing digital world map where a red data stream bounces rapidly between different continents, symbolizing IP routing and Tor network encryption. High-tech cyber-espionage theme, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 3,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Táctica de investigación forense: uso de entornos controlados o Cajas de Arena (Sand Box) recomendados por estándares internacionales.",
+      "texto_en_pantalla": "Pero la impunidad terminó. Investigadores informáticos configuraron entornos aislados, conocidos como 'Cajas de Arena', para infiltrarse en la red sin ser detectados.",
+      "prompt_ia_generadora": "A glowing digital sandbox isolating a secure, bright blue computer terminal from a surrounding sea of red malicious code. Professional forensics laboratory concept, dramatic contrast, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 4,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Intervención judicial aplicando la figura venezolana de Obtención por Aseguramiento según el MUCCEF.",
+      "texto_en_pantalla": "Rastrearon un mínimo error de conexión y lograron una orden de allanamiento. Aplicando el MUCCEF, ejecutaron la 'Obtención por Aseguramiento' de equipos.",
+      "prompt_ia_generadora": "Silhouettes of tactical police units entering a dark room filled with glowing computer servers. Yellow crime scene tape reading 'EVIDENCE' wraps around a glowing laptop. 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 5,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "La adquisición forense en vivo de la memoria volátil (RAM) para no perder datos encriptados.",
+      "texto_en_pantalla": "Para no alterar la evidencia volátil, los peritos extrajeron la memoria RAM en vivo, buscando recuperar contraseñas y conexiones de red activas.",
+      "prompt_ia_generadora": "A futuristic digital magnifying glass hovering over a computer RAM stick, extracting a stream of bright glowing golden keys and green binary code. Cybersecurity lab setting, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 6,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Blindaje de la prueba mediante el algoritmo Hash y su registro en la Planilla de Cadena de Custodia (PRCC).",
+      "texto_en_pantalla": "Toda la evidencia extraída fue blindada calculando su algoritmo matemático Hash y registrada meticulosamente en la Planilla de Registro de Cadena de Custodia.",
+      "prompt_ia_generadora": "A glowing cryptographic hash code securely sealing a formal physical legal document. Cyber-legal aesthetic, neon blue and amber lights, dramatic shadows, highly detailed, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 7,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Resolución del caso aplicando las sanciones correspondientes a la Ley Especial Contra los Delitos Informáticos.",
+      "texto_en_pantalla": "El análisis reveló las llaves de sus billeteras digitales. Fueron condenados bajo la severa Ley Especial Contra los Delitos Informáticos de Venezuela.",
+      "prompt_ia_generadora": "A heavy wooden judge's gavel smashing down on a glowing hacker's mask, shattering it into pieces to reveal digital prison bars. Authoritative legal atmosphere, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 8,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Lección legal sobre el falso anonimato en la Deep Web y Llamado a la Acción (CTA).",
+      "texto_en_pantalla": "La lección: en la Deep Web, un solo error de conexión destruye tu anonimato. La informática forense no perdona. ¡Guarda y comparte!",
+      "prompt_ia_generadora": "A bright neon shield protecting a glowing network gateway, while a digital eye watches from the dark background. Minimalist, high contrast, plenty of negative space for text, 9:16 aspect ratio, no text."
+    }
+  ]
+}
+```

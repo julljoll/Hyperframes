@@ -1,0 +1,66 @@
+{
+  "configuracion_reels": {
+    "objetivo": "Crear un video tipo Reel/TikTok continuo y narrativo sobre un caso de robo de datos bancarios a través de un enlace malicioso en TikTok, resuelto mediante forensia móvil y análisis de redes sociales.",
+    "formato_video": "Vertical 1080x1920 (Relación de aspecto 9:16).",
+    "duracion_total": "64 segundos (8 clips, 8 segundos por clip).",
+    "estilo_visual_ia": "Fotorealismo conceptual, thriller cibernético y ciber-forense. Ambientes de laboratorios tecnológicos, hologramas de aplicaciones móviles, códigos maliciosos (troyanos), y luces de neón (cian, rojo y verde). Fondo oscuro con amplio espacio negativo central para los subtítulos. REGLA: SIN TEXTO GENERADO EN LA IMAGEN."
+  },
+  "guion_video_clips": [
+    {
+      "clip": 1,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Enganche introductorio presentando el vector de ataque: un enlace engañoso en una plataforma popular (TikTok).",
+      "texto_en_pantalla": "Un joven hizo clic en un enlace viral de TikTok que prometía filtros exclusivos. En realidad, descargó un troyano para robo de datos.",
+      "prompt_ia_generadora": "A glowing smartphone displaying a viral short video app interface with a bright neon red malicious link hovering above it. Cyber-threat aesthetic, cinematic lighting, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 2,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "El modus operandi del cibercriminal extrayendo datos confidenciales de forma silenciosa.",
+      "texto_en_pantalla": "El software malicioso operó en silencio, extrayendo contraseñas bancarias y fotografías íntimas directamente desde su smartphone sin encender ninguna alarma de seguridad.",
+      "prompt_ia_generadora": "A dark hacker silhouette reflected on a glowing smartphone screen showing digital bank vaults and private photos being locked with red digital chains. Cyber-crime aesthetic, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 3,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Intervención forense inicial aplicando el aislamiento del dispositivo (Bolsa de Faraday).",
+      "texto_en_pantalla": "Tras el millonario robo, la víctima denunció. Peritos informáticos aislaron inmediatamente el celular en una bolsa de Faraday para evitar el borrado remoto.",
+      "prompt_ia_generadora": "A forensic investigator's hands carefully placing a modern smartphone into a glowing high-tech anti-static Faraday bag. Cybersecurity lab environment, neon blue lighting, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 4,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Adquisición de la evidencia móvil utilizando herramientas forenses especializadas (como UFED o MSAB XRY).",
+      "texto_en_pantalla": "Aplicando normativas internacionales, los expertos realizaron una extracción física de la memoria del dispositivo móvil usando herramientas forenses avanzadas como MSAB XRY.",
+      "prompt_ia_generadora": "A smartphone connected by glowing fiber optic cables to a high-tech forensic terminal extracting streams of green binary data. Digital forensics laboratory aesthetic, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 5,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Análisis de la evidencia digital y descubrimiento del malware vinculado a la red social.",
+      "texto_en_pantalla": "El peritaje informático sobre la memoria volátil y bases de datos descubrió el código malicioso, vinculándolo directamente al perfil falso de TikTok.",
+      "prompt_ia_generadora": "A futuristic digital magnifying glass scanning a glowing mobile app icon, revealing a hidden red malicious trojan horse symbol inside the code. High contrast, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 6,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Técnica OSINT y forensia en redes sociales: obtención del ID único de la cuenta atacante.",
+      "texto_en_pantalla": "Los investigadores analizaron el código fuente de la red social, obteniendo el ID único del cibercriminal y sus registros de conexión IP.",
+      "prompt_ia_generadora": "A glowing holographic social media profile page where the user picture morphs into a bright red IP address and a digital fingerprint. Cyber-investigation theme, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 7,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Resolución del caso con la captura del responsable por delitos informáticos (Fraude y Espionaje).",
+      "texto_en_pantalla": "Gracias a la cooperación judicial internacional, rastrearon al atacante. Fue capturado y condenado a prisión por fraude informático y espionaje de datos.",
+      "prompt_ia_generadora": "A heavy wooden judge's gavel slamming down next to a glowing red hacker mask, shattering it into digital pieces. Authoritative legal atmosphere, dramatic shadows, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 8,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Lección legal preventiva y Llamado a la Acción (CTA) para interacción en redes.",
+      "texto_en_pantalla": "La lección legal: los enlaces virales en redes sociales pueden ser trampas letales. ¡Protege tu identidad digital, guarda y comparte este video!",
+      "prompt_ia_generadora": "A bright neon shield protecting a glowing smartphone from an array of fake digital social media icons. Dark minimalist background, plenty of negative space for text at the top and center, 9:16 aspect ratio, no text."
+    }
+  ]
+}

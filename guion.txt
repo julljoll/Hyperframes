@@ -1,0 +1,74 @@
+Basado en los documentos proporcionados, he diseñado un nuevo guion enfocado en un fascinante método de cibercrimen financiero documentado en la criminología digital: **La Técnica del Salami (Salami Technique)** y las **falsificaciones informáticas**. 
+
+Esta historia ilustra cómo un cibercriminal altera el software bancario para robar fracciones de centavos, y cómo los peritos logran desmantelar el fraude aplicando los protocolos de **Obtención por Aseguramiento** y la creación de **imágenes forenses** selladas con algoritmos **Hash**.
+
+Aquí tienes el guion estructurado exactamente en el formato `.json` para la generación de tu video corto (Reel/TikTok/Shorts), dividido en **8 fragmentos de 8 segundos** y con un ritmo de locución preciso:
+
+```json
+{
+  "configuracion_reels": {
+    "objetivo": "Crear un video tipo Reel/TikTok continuo y narrativo sobre el fraude financiero conocido como 'La Técnica del Salami', destacando el uso de la informática forense para descubrir alteraciones en el código.",
+    "formato_video": "Vertical 1080x1920 (Relación de aspecto 9:16).",
+    "duracion_total": "64 segundos (8 clips, 8 segundos por clip).",
+    "estilo_visual_ia": "Fotorealismo conceptual, thriller financiero y cibernético. Ambientes oscuros de servidores bancarios, hologramas de dinero digital, códigos binarios y luces de neón (verde, dorado y rojo). Fondo oscuro con amplio espacio negativo central para los subtítulos. REGLA: SIN TEXTO GENERADO EN LA IMAGEN."
+  },
+  "guion_video_clips": [
+    {
+      "clip": 1,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Enganche introductorio presentando el robo bancario perfecto sin levantar sospechas.",
+      "texto_en_pantalla": "En el mundo financiero, un empleado bancario descubrió cómo robar millones de dólares sin encender una sola alarma de seguridad.",
+      "prompt_ia_generadora": "A dark, luxurious bank vault where glowing microscopic digital gold coins are silently floating away into the shadows. Cinematic lighting, thriller aesthetic, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 2,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Explicación del modus operandi criminológico: La técnica del Salami.",
+      "texto_en_pantalla": "Utilizó la famosa 'Técnica del Salami', alterando el software para desviar fracciones de centavos de miles de transacciones hacia su cuenta.",
+      "prompt_ia_generadora": "A glowing holographic computer keyboard where digital data streams transform into thin, glowing green slices of money slipping into a hidden digital folder. Cyber-crime aesthetic, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 3,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "El problema de la detección debido a las cantidades microscópicas automatizadas.",
+      "texto_en_pantalla": "Al ser cantidades microscópicas, los clientes no lo notaban. El robo automatizado acumuló una inmensa fortuna de forma silenciosa e indetectable.",
+      "prompt_ia_generadora": "A massive, towering pile of glowing golden digital pennies illuminating a pitch-black, shadowy room. Financial hacker aesthetic, dramatic contrast, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 4,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "La intervención legal y forense mediante el aseguramiento de los equipos.",
+      "texto_en_pantalla": "Hasta que una auditoría forense intervino. Los peritos informáticos aislaron los servidores del banco aplicando el protocolo de 'Obtención por Aseguramiento'.",
+      "prompt_ia_generadora": "Silhouettes of forensic investigators carefully securing glowing blue corporate server racks with bright yellow crime scene tape. High-tech cyber-investigation theme, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 5,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "El blindaje de la evidencia digital mediante clonación y cálculo Hash.",
+      "texto_en_pantalla": "Utilizando duplicadores forenses, crearon imágenes exactas de los discos duros, blindando la evidencia con inquebrantables algoritmos matemáticos Hash.",
+      "prompt_ia_generadora": "A high-tech digital forensic duplicator cloning a computer hard drive, enveloped in a glowing blue cryptographic hash padlock. Cybersecurity laboratory setting, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 6,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "El hallazgo en la etapa de análisis: instrucciones de código malicioso oculto.",
+      "texto_en_pantalla": "El análisis profundo del código fuente y las bases de datos reveló el engaño: instrucciones ocultas que automatizaban el desvío sistemático.",
+      "prompt_ia_generadora": "A futuristic digital magnifying glass scanning a massive wall of green binary code, illuminating hidden, malicious red warning code lines. Cyber-investigation theme, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 7,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "La condena legal por alteración de datos o falsificación informática.",
+      "texto_en_pantalla": "Esta alteración maliciosa o 'falsificación informática' fue la prueba reina. El empleado enfrentó severos cargos y prisión por Fraude Informático.",
+      "prompt_ia_generadora": "A heavy wooden judge's gavel smashing down next to a glowing red computer screen and digital handcuffs made of laser light. Authoritative legal atmosphere, 9:16 aspect ratio, no text."
+    },
+    {
+      "clip": 8,
+      "duracion": "8 segundos",
+      "explicacion_fragmento_ley": "Lección legal sobre las huellas del cibercrimen y Llamado a la acción (CTA).",
+      "texto_en_pantalla": "La lección: en la informática forense, los robos microscópicos dejan huellas gigantes. Audita tus sistemas, ¡guarda este video y compártelo!",
+      "prompt_ia_generadora": "A bright neon shield protecting a glowing financial graph from an array of red digital threats. Dark minimalist background, plenty of negative space for text at the top and center, 9:16 aspect ratio, no text."
+    }
+  ]
+}
+```

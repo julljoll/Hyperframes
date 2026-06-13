@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0a0a0f;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: #e2e2e2;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 120px 160px;
+        gap: 24px;
+        box-sizing: border-box;
+      }
+      .title {
+        font-size: 120px;
+        font-weight: 800;
+        letter-spacing: -2px;
+        background: linear-gradient(135deg, #6366f1, #a78bfa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .subtitle {
+        font-size: 42px;
+        font-weight: 400;
+        color: #94a3b8;
+      }
+      .accent {
+        width: 120px;
+        height: 4px;
+        background: linear-gradient(90deg, #6366f1, #a78bfa);
+        border-radius: 2px;
+      }
+      .card {
+        background: rgba(30, 32, 36, 0.8);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        border-radius: 16px;
+        padding: 32px 40px;
+        width: 100%;
+        max-width: 700px;
+      }
+      .card .stat {
+        font-size: 72px;
+        font-weight: 800;
+        color: #a78bfa;
+      }
+      .card .label {
+        font-size: 28px;
+        color: #94a3b8;
+        margin-top: 8px;
+      }
+      .grid-3 {
+        display: flex;
+        gap: 24px;
+        width: 100%;
+        justify-content: center;
+      }
+      .grid-3 .card {
+        flex: 1;
+        max-width: 400px;
+        text-align: center;
+      }
+      .grid-2x2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        width: 100%;
+        max-width: 1000px;
+      }
+      .grid-2x2 .card {
+        text-align: center;
+      }
+      .milestone {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+        max-width: 800px;
+      }
+      .milestone .dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #6366f1;
+        flex-shrink: 0;
+      }
+      .milestone .line {
+        width: 2px;
+        height: 60px;
+        background: linear-gradient(180deg, #6366f1, transparent);
+        margin-left: 9px;
+      }
+      .milestone .content h3 {
+        font-size: 36px;
+        font-weight: 600;
+      }
+      .milestone .content p {
+        font-size: 24px;
+        color: #94a3b8;
+      }
+      .outro-title {
+        font-size: 96px;
+        font-weight: 800;
+        color: #e2e2e2;
+      }
+      .transition-overlay {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="60"
+      data-width="1920"
+      data-height="1080"
+    >
+      <!-- Transitions overlays (always present, animated via timeline) -->
+      <div id="t1-glitch" class="transition-overlay" style="background: #6366f1; opacity: 0"></div>
+      <div id="t2-zoom" class="transition-overlay" style="background: #0a0a0f; opacity: 0"></div>
+      <div
+        id="t3-dissolve"
+        class="transition-overlay"
+        style="background: #e2e2e2; opacity: 0; mix-blend-mode: difference"
+      ></div>
+      <div id="t4-fade" class="transition-overlay" style="background: #0a0a0f; opacity: 0"></div>
+
+      <!-- Scene 0: Title Card (0-10s) -->
+      <div id="scene-0" class="clip scene" data-start="0" data-duration="10" data-track-index="0">
+        <div class="accent" style="transform-origin: left"></div>
+        <h1 id="s0-title" class="title">HyperFrames</h1>
+        <p id="s0-sub" class="subtitle">Write HTML. Render Video. 60s Test Composition.</p>
+      </div>
+
+      <!-- Scene 1: Stats Grid (10-25s) -->
+      <div id="scene-1" class="clip scene" data-start="10" data-duration="15" data-track-index="1">
+        <h2 id="s1-heading" style="font-size: 56px; font-weight: 700; margin-bottom: 40px">
+          Key Metrics
+        </h2>
+        <div class="grid-3">
+          <div id="s1-card-1" class="card">
+            <div class="stat">30</div>
+            <div class="label">Frames Per Second</div>
+          </div>
+          <div id="s1-card-2" class="card">
+            <div class="stat">4K</div>
+            <div class="label">Max Resolution</div>
+          </div>
+          <div id="s1-card-3" class="card">
+            <div class="stat">8</div>
+            <div class="label">Animation Runtimes</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 2: Timeline (25-40s) -->
+      <div id="scene-2" class="clip scene" data-start="25" data-duration="15" data-track-index="2">
+        <h2 id="s2-heading" style="font-size: 56px; font-weight: 700; margin-bottom: 40px">
+          Development Timeline
+        </h2>
+        <div class="milestone" id="s2-m1">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>2018</h3>
+            <p>Idea &amp; first prototype</p>
+          </div>
+        </div>
+        <div class="milestone" id="s2-m1-line"><div class="line" style="height: 40px"></div></div>
+        <div class="milestone" id="s2-m2">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>2022</h3>
+            <p>Open source launch</p>
+          </div>
+        </div>
+        <div class="milestone" id="s2-m2-line"><div class="line" style="height: 40px"></div></div>
+        <div class="milestone" id="s2-m3">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>2026</h3>
+            <p>Production ready with 8 adapters</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 3: Feature Grid (40-55s) -->
+      <div id="scene-3" class="clip scene" data-start="40" data-duration="15" data-track-index="3">
+        <h2 id="s3-heading" style="font-size: 56px; font-weight: 700; margin-bottom: 40px">
+          Features
+        </h2>
+        <div class="grid-2x2">
+          <div id="s3-cell-1" class="card">
+            <div class="stat">🎬</div>
+            <div
+              class="label"
+              style="margin-top: 16px; font-size: 32px; font-weight: 600; color: #e2e2e2"
+            >
+              Deterministic
+            </div>
+            <div class="label">Same input, same output</div>
+          </div>
+          <div id="s3-cell-2" class="card">
+            <div class="stat">⚡</div>
+            <div
+              class="label"
+              style="margin-top: 16px; font-size: 32px; font-weight: 600; color: #e2e2e2"
+            >
+              Fast
+            </div>
+            <div class="label">Preview in real-time</div>
+          </div>
+          <div id="s3-cell-3" class="card">
+            <div class="stat">🔌</div>
+            <div
+              class="label"
+              style="margin-top: 16px; font-size: 32px; font-weight: 600; color: #e2e2e2"
+            >
+              Adapter-based
+            </div>
+            <div class="label">GSAP, CSS, Three.js</div>
+          </div>
+          <div id="s3-cell-4" class="card">
+            <div class="stat">📦</div>
+            <div
+              class="label"
+              style="margin-top: 16px; font-size: 32px; font-weight: 600; color: #e2e2e2"
+            >
+              No Build
+            </div>
+            <div class="label">HTML plays as-is</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 4: Outro (55-60s) -->
+      <div
+        id="scene-4"
+        class="clip scene"
+        data-start="55"
+        data-duration="5"
+        data-track-index="4"
+        style="background: #0a0a0f"
+      >
+        <h1 id="s4-title" class="outro-title">Thank You</h1>
+        <p id="s4-sub" class="subtitle" style="margin-top: 16px">hyperframes.heygen.com</p>
+        <div
+          id="s4-line"
+          class="accent"
+          style="margin-top: 24px; transform-origin: left; width: 0"
+        ></div>
+      </div>
+
+      <!-- Fade to black overlay -->
+      <div
+        id="fade-to-black"
+        class="transition-overlay"
+        style="background: #000; opacity: 0; z-index: 200"
+      ></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // ── Scene 0: Title (0-10s) ─────────────────────────────────
+      tl.from("#s0-title", { y: 60, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.3);
+      tl.from(".accent", { scaleX: 0, duration: 0.6, ease: "power2.out" }, 0.2);
+      tl.from("#s0-sub", { y: 40, opacity: 0, duration: 0.6, ease: "power2.out" }, 0.7);
+
+      // Scene 0 → Scene 1 transition: glitch
+      tl.to("#t1-glitch", { opacity: 0.7, duration: 0.1 }, 9.5);
+      tl.to("#t1-glitch", { opacity: 0, duration: 0.15 }, 9.65);
+
+      // ── Scene 1: Stats (10-25s) ───────────────────────────────
+      tl.from("#s1-heading", { y: 50, opacity: 0, duration: 0.6, ease: "power2.out" }, 10.2);
+      tl.from("#s1-card-1", { y: 40, opacity: 0, duration: 0.5, ease: "back.out(1.2)" }, 10.5);
+      tl.from("#s1-card-2", { y: 40, opacity: 0, duration: 0.5, ease: "back.out(1.2)" }, 10.7);
+      tl.from("#s1-card-3", { y: 40, opacity: 0, duration: 0.5, ease: "back.out(1.2)" }, 10.9);
+
+      // Scene 1 → Scene 2 transition: zoom through
+      tl.to("#t2-zoom", { scale: 1.2, opacity: 0.9, duration: 0.3, ease: "power2.in" }, 24.5);
+      tl.to("#t2-zoom", { scale: 1, opacity: 0, duration: 0.2, ease: "power2.out" }, 24.8);
+      tl.set("#t2-zoom", { opacity: 0 }, 25);
+
+      // ── Scene 2: Timeline (25-40s) ────────────────────────────
+      tl.from("#s2-heading", { y: 50, opacity: 0, duration: 0.6, ease: "power2.out" }, 25.2);
+      tl.from("#s2-m1", { x: -40, opacity: 0, duration: 0.5, ease: "expo.out" }, 25.6);
+      tl.from(
+        "#s2-m1-line",
+        { scaleY: 0, transformOrigin: "top", duration: 0.4, ease: "power2.out" },
+        26,
+      );
+      tl.from("#s2-m2", { x: -40, opacity: 0, duration: 0.5, ease: "expo.out" }, 26.3);
+      tl.from(
+        "#s2-m2-line",
+        { scaleY: 0, transformOrigin: "top", duration: 0.4, ease: "power2.out" },
+        26.7,
+      );
+      tl.from("#s2-m3", { x: -40, opacity: 0, duration: 0.5, ease: "expo.out" }, 27);
+
+      // Scene 2 → Scene 3 transition: dissolve
+      tl.to("#t3-dissolve", { opacity: 0.8, duration: 0.3, ease: "power2.in" }, 39.5);
+      tl.to("#t3-dissolve", { opacity: 0, duration: 0.2, ease: "power2.out" }, 39.8);
+      tl.set("#t3-dissolve", { opacity: 0 }, 40);
+
+      // ── Scene 3: Feature Grid (40-55s) ────────────────────────
+      tl.from("#s3-heading", { y: 50, opacity: 0, duration: 0.6, ease: "power2.out" }, 40.2);
+      tl.from("#s3-cell-1", { scale: 0.8, opacity: 0, duration: 0.5, ease: "back.out(1.3)" }, 40.6);
+      tl.from("#s3-cell-2", { scale: 0.8, opacity: 0, duration: 0.5, ease: "back.out(1.3)" }, 40.9);
+      tl.from("#s3-cell-3", { scale: 0.8, opacity: 0, duration: 0.5, ease: "back.out(1.3)" }, 41.2);
+      tl.from("#s3-cell-4", { scale: 0.8, opacity: 0, duration: 0.5, ease: "back.out(1.3)" }, 41.5);
+
+      // Scene 3 → Scene 4 transition: blur crossfade
+      tl.to("#t4-fade", { opacity: 0.9, duration: 0.4, ease: "power2.in" }, 54.5);
+      tl.to("#t4-fade", { opacity: 1, duration: 0.1, ease: "none" }, 54.9);
+
+      // ── Scene 4: Outro (55-60s) ───────────────────────────────
+      tl.from("#s4-title", { y: 60, opacity: 0, duration: 0.7, ease: "power3.out" }, 55.3);
+      tl.from("#s4-sub", { y: 30, opacity: 0, duration: 0.5, ease: "power2.out" }, 55.7);
+      tl.to("#s4-line", { width: 120, duration: 0.6, ease: "expo.out" }, 55.9);
+
+      // Fade to black
+      tl.to("#fade-to-black", { opacity: 1, duration: 1, ease: "power2.in" }, 59);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

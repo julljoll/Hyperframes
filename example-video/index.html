@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HyperFrames Example - Product Launch</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0D1B2A;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    [data-composition-id="root"] {
+      width: 1920px;
+      height: 1080px;
+      position: relative;
+      background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #0D1B2A 100%);
+      overflow: hidden;
+    }
+
+    /* Background decoratives */
+    .bg-glow {
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(116, 140, 171, 0.15) 0%, transparent 70%);
+      top: -200px;
+      right: -200px;
+      z-index: 0;
+    }
+
+    .bg-glow-2 {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+      bottom: -150px;
+      left: -150px;
+      z-index: 0;
+    }
+
+    .grid-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(116, 140, 171, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(116, 140, 171, 0.03) 1px, transparent 1px);
+      background-size: 100px 100px;
+      z-index: 0;
+    }
+
+    .ghost-text {
+      position: absolute;
+      font-size: 400px;
+      font-weight: 900;
+      color: rgba(116, 140, 171, 0.03);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Scene content container */
+    .scene-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 120px 160px;
+      gap: 32px;
+    }
+
+    /* Logo */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .logo-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #E0E1DD 0%, #748CAB 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #0D1B2A;
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: 600;
+      color: #E0E1DD;
+      letter-spacing: 2px;
+    }
+
+    /* Hero title */
+    .hero-title {
+      font-size: 96px;
+      font-weight: 900;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #FCA311 0%, #FFD60A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Subtitle */
+    .subtitle {
+      font-size: 36px;
+      font-weight: 300;
+      color: #748CAB;
+      text-align: center;
+      max-width: 900px;
+      line-height: 1.5;
+    }
+
+    /* Feature cards */
+    .features {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .feature-card {
+      background: rgba(27, 38, 59, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(116, 140, 171, 0.2);
+      border-radius: 20px;
+      padding: 40px 32px;
+      width: 360px;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      background: linear-gradient(135deg, rgba(252, 163, 17, 0.2) 0%, rgba(255, 214, 10, 0.1) 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+
+    .feature-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #E0E1DD;
+      margin-bottom: 12px;
+    }
+
+    .feature-desc {
+      font-size: 16px;
+      color: #748CAB;
+      line-height: 1.6;
+    }
+
+    /* CTA Button */
+    .cta-button {
+      margin-top: 48px;
+      padding: 20px 64px;
+      background: linear-gradient(135deg, #FCA311 0%, #FFD60A 100%);
+      border: none;
+      border-radius: 50px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #0D1B2A;
+      cursor: pointer;
+      box-shadow: 0 10px 40px rgba(252, 163, 17, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Clip timing attributes */
+    .clip {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div data-composition-id="root" data-width="1920" data-height="1080">
+    <!-- Background Decoratives -->
+    <div class="bg-glow clip" data-start="0" data-duration="8"></div>
+    <div class="bg-glow-2 clip" data-start="0" data-duration="8"></div>
+    <div class="grid-lines clip" data-start="0" data-duration="8"></div>
+    <div class="ghost-text clip" data-start="0" data-duration="8">LAUNCH</div>
+
+    <!-- Main Content -->
+    <div class="scene-content">
+      <div class="logo-container clip" data-start="0.5" data-duration="7">
+        <div class="logo-icon">H</div>
+        <div class="logo-text">HYPERFRAMES</div>
+      </div>
+
+      <h1 class="hero-title clip" data-start="1" data-duration="6.5">
+        Build Videos<br>With <span>HTML</span>
+      </h1>
+
+      <p class="subtitle clip" data-start="2" data-duration="5.5">
+        Create stunning video compositions using the web technologies you already know.
+        No React required. Just HTML, CSS, and GSAP.
+      </p>
+
+      <div class="features">
+        <div class="feature-card clip" data-start="3" data-duration="4.5">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-title">Lightning Fast</div>
+          <div class="feature-desc">Render videos in seconds with deterministic output every time.</div>
+        </div>
+
+        <div class="feature-card clip" data-start="3.3" data-duration="4.5">
+          <div class="feature-icon">🎨</div>
+          <div class="feature-title">Fully Customizable</div>
+          <div class="feature-desc">Complete control with CSS, GSAP, Lottie, Three.js and more.</div>
+        </div>
+
+        <div class="feature-card clip" data-start="3.6" data-duration="4.5">
+          <div class="feature-icon">🤖</div>
+          <div class="feature-title">AI Ready</div>
+          <div class="feature-desc">Built for agents to generate video programmatically.</div>
+        </div>
+      </div>
+
+      <button class="cta-button clip" data-start="4.5" data-duration="3">
+        Get Started →
+      </button>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      
+      const tl = gsap.timeline({ paused: true });
+
+      // Background elements - slow ambient animation
+      tl.from(".bg-glow", { scale: 0.8, opacity: 0, duration: 2, ease: "power2.out" }, 0);
+      tl.from(".bg-glow-2", { scale: 0.8, opacity: 0, duration: 2, ease: "power2.out" }, 0.3);
+      tl.from(".grid-lines", { opacity: 0, duration: 1.5, ease: "power2.out" }, 0);
+      tl.from(".ghost-text", { scale: 0.9, opacity: 0, duration: 2.5, ease: "power2.out" }, 0.5);
+      
+      // Ambient breathing motion for decoratives
+      tl.to(".bg-glow", { scale: 1.05, duration: 4, ease: "sine.inOut" }, 2);
+      tl.to(".bg-glow-2", { scale: 1.05, duration: 4, ease: "sine.inOut" }, 2.3);
+      tl.to(".ghost-text", { x: 20, duration: 5, ease: "sine.inOut" }, 2.5);
+
+      // Logo entrance
+      tl.from(".logo-container", { y: -40, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.5);
+
+      // Hero title entrance
+      tl.from(".hero-title", { y: 60, opacity: 0, duration: 1, ease: "power3.out" }, 1);
+
+      // Subtitle entrance
+      tl.from(".subtitle", { y: 40, opacity: 0, duration: 0.8, ease: "power3.out" }, 2);
+
+      // Feature cards staggered entrance
+      tl.from(".feature-card", { y: 80, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.15 }, 3);
+
+      // CTA button entrance with scale
+      tl.from(".cta-button", { scale: 0.8, opacity: 0, duration: 0.6, ease: "back.out(1.7)" }, 4.5);
+
+      // Exit animations
+      tl.to(".cta-button", { scale: 1.1, opacity: 0, duration: 0.4, ease: "power2.in" }, 7);
+      tl.to(".feature-card", { y: -40, opacity: 0, duration: 0.5, stagger: 0.1, ease: "power2.in" }, 7.1);
+      tl.to(".subtitle", { y: -30, opacity: 0, duration: 0.4, ease: "power2.in" }, 7.3);
+      tl.to(".hero-title", { y: -50, opacity: 0, duration: 0.5, ease: "power2.in" }, 7.4);
+      tl.to(".logo-container", { y: -40, opacity: 0, duration: 0.4, ease: "power2.in" }, 7.5);
+      tl.to(".bg-glow, .bg-glow-2, .grid-lines, .ghost-text", { opacity: 0, duration: 0.5 }, 7.6);
+
+      window.__timelines["root"] = tl;
+    </script>
+  </div>
+</body>
+</html>
